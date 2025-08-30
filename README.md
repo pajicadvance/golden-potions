@@ -1,17 +1,12 @@
-# pajic's Fabric mod template
+# Golden Potions
 
-Preconfigured with:
-- [Parchment](https://parchmentmc.org/) mappings
-- [Stonecutter](https://stonecutter.kikugie.dev/) for multiversioning
-- [Fzzy Config](https://fzzyhmstrs.github.io/fconfig/) for mod configuration
-- [Mod Publish Plugin](https://github.com/modmuss50/mod-publish-plugin) for publishing to Modrinth and CurseForge
+This mod makes golden food inedible and lets you brew potions from them which provide the effects they used to give when eaten.
 
-Idea run configurations:
-- Run client: Runs the client of the currently active MC version
-- Run server: Runs the server of the currently active MC version
-- Build: Builds the mod for all MC versions
-- Publish: Publishes the mod for all MC versions to Modrinth and CurseForge
+## Features
 
-Required Idea plugins:
-- [Minecraft Development](https://plugins.jetbrains.com/plugin/8327-minecraft-development)
-- [Stonecutter Dev](https://plugins.jetbrains.com/plugin/25044-stonecutter-dev)
+- Golden apples can now be used to brew Potions of Absorption, which provide the Absorption effect when used.
+- Enchanted golden apples can now be used to brew Elixirs of Life, a unique potion which provides all the effects the enchanted golden apple used to give when eaten.
+- The new potions have splash and lingering variants, and tipped arrows can be crafted from the lingering variant, just like other tipped arrows.
+- Potion of Absorption has a long and strong variant, while Elixir of Life does not.
+- Golden apples, enchanted golden apples, and golden carrots are now inedible. This feature can be disabled in the mod configuration for each food item separately.
+- Creative mode tabs are modified based on the current mod settings.

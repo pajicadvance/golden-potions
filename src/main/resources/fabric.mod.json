@@ -1,24 +1,21 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "goldenpotions",
   "version": "${version}",
-  "name": "modname",
-  "description": "",
-  "authors": [],
+  "name": "Golden Potions",
+  "description": "Brew potions from golden food items instead of eating them",
+  "authors": ["pajic"],
   "contact": {},
   "license": "MIT",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
-    "client": [
-      "me.pajic.modid.ClientMain"
-    ],
     "main": [
-      "me.pajic.modid.Main"
+      "me.pajic.goldenpotions.Main"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "goldenpotions.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",

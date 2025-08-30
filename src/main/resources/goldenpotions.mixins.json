@@ -1,12 +1,17 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "me.pajic.modid.mixin",
+  "mixinextras": {"minVersion": "0.5.0"},
+  "package": "me.pajic.goldenpotions.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
+    "CreativeModeTabsMixin",
+    "ItemsMixin",
+    "MobEffectsMixin",
+    "PotionItemMixin",
+    "TippedArrowItemMixin"
   ],
   "client": [
-    "ExampleMixin"
   ],
   "injectors": {
     "defaultRequire": 1

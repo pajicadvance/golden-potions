@@ -1,0 +1,15 @@
+{
+  "goldenpotions.config.": "Mod Configuration",
+  "goldenpotions.config.edibleGoldenApple": "Edible golden apple",
+  "goldenpotions.config.edibleEnchantedGoldenApple": "Edible enchanted golden apple",
+  "goldenpotions.config.edibleGoldenCarrot": "Edible golden carrot",
+
+  "item.minecraft.potion.effect.absorption": "Potion of Absorption",
+  "item.minecraft.splash_potion.effect.absorption": "Splash Potion of Absorption",
+  "item.minecraft.lingering_potion.effect.absorption": "Lingering Potion of Absorption",
+  "item.minecraft.tipped_arrow.effect.absorption": "Arrow of Absorption",
+  "item.minecraft.potion.effect.elixir_of_life": "Elixir of Life",
+  "item.minecraft.splash_potion.effect.elixir_of_life": "Splash Elixir of Life",
+  "item.minecraft.lingering_potion.effect.elixir_of_life": "Lingering Elixir of Life",
+  "item.minecraft.tipped_arrow.effect.elixir_of_life": "Arrow of Life"
+}
