@@ -1,1 +1,1 @@
-- Initial release.
+- Fixed golden apples still being edible in 1.21.8.
