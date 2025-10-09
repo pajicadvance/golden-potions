@@ -1,1 +1,1 @@
-- Fixed golden apples still being edible in 1.21.8.
+- Updated to Minecraft 1.21.10.

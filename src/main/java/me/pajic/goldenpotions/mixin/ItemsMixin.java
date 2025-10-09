@@ -10,9 +10,9 @@ import net.minecraft.world.item.Items;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 //? if >= 1.21.8 {
-/*import net.minecraft.world.item.component.Consumable;
+import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.item.component.Consumables;
-*///?}
+//?}
 
 @Mixin(Items.class)
 public class ItemsMixin {
@@ -32,7 +32,7 @@ public class ItemsMixin {
     }
 
     //? if >= 1.21.8 {
-    /*@WrapOperation(
+    @WrapOperation(
             method = "<clinit>",
             at = @At(
                     value = "INVOKE",
@@ -44,5 +44,5 @@ public class ItemsMixin {
                 consumable.equals(Consumables.ENCHANTED_GOLDEN_APPLE) && !Main.CONFIG.edibleEnchantedGoldenApple.get() ?
                 instance : original.call(instance, food, consumable);
     }
-    *///?}
+    //?}
 }

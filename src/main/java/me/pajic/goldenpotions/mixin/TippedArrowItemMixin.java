@@ -18,15 +18,14 @@ public abstract class TippedArrowItemMixin extends Item {
     }
 
     //? if < 1.21.8 {
-    @Override
+    /*@Override
     public @NotNull Component getName(@NotNull ItemStack stack) {
         return ModPotions.isElixirOfLife(stack) ?
                 super.getName(stack).copy().withStyle(ModPotions.getElixirOfLifeNameColor()) :
                 super.getName(stack);
     }
-    //?}
-    //? if >= 1.21.8 {
-    /*@ModifyReturnValue(
+    *///?} else {
+    @ModifyReturnValue(
             method = "getName",
             at = @At("RETURN")
     )
@@ -35,7 +34,7 @@ public abstract class TippedArrowItemMixin extends Item {
                 original.copy().withStyle(ModPotions.getElixirOfLifeNameColor()) :
                 original;
     }
-    *///?}
+    //?}
 
     @Override
     public boolean isFoil(@NotNull ItemStack stack) {

@@ -51,7 +51,7 @@ public class ModPotions {
                     new MobEffectInstance(MobEffects.REGENERATION, 400, 1),
                     new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 6000, 0),
                     new MobEffectInstance(
-                            MobEffects./*? if < 1.21.8 {*/DAMAGE_RESISTANCE/*?}*//*? if >= 1.21.8 {*//*RESISTANCE*//*?}*/,
+                            MobEffects./*? if < 1.21.8 {*//*DAMAGE_RESISTANCE*//*?} else {*/RESISTANCE/*?}*/,
                             6000, 0
                     )
             )
@@ -66,9 +66,9 @@ public class ModPotions {
 
     public static ChatFormatting getElixirOfLifeNameColor() {
         //? if < 1.21.8
-        return ChatFormatting.LIGHT_PURPLE;
+        /*return ChatFormatting.LIGHT_PURPLE;*/
         //? if >= 1.21.8
-        /*return ChatFormatting.AQUA;*/
+        return ChatFormatting.AQUA;
     }
 
     public static void init() {
