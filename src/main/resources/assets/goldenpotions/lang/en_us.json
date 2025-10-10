@@ -11,5 +11,9 @@
   "item.minecraft.potion.effect.elixir_of_life": "Elixir of Life",
   "item.minecraft.splash_potion.effect.elixir_of_life": "Splash Elixir of Life",
   "item.minecraft.lingering_potion.effect.elixir_of_life": "Lingering Elixir of Life",
-  "item.minecraft.tipped_arrow.effect.elixir_of_life": "Arrow of Life"
+  "item.minecraft.tipped_arrow.effect.elixir_of_life": "Arrow of Life",
+
+  "lore.minecraft.golden_carrot": "A gilded vegetable that is used for potion brewing and feeding animals.",
+  "lore.minecraft.golden_apple": "An item that can be used to brew a potion that grants extra health.",
+  "lore.minecraft.enchanted_golden_apple": "An item that can be used to brew a potion with astounding abilities. It's a rare find."
 }

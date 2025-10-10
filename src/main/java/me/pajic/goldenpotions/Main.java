@@ -2,6 +2,7 @@ package me.pajic.goldenpotions;
 
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
 import me.pajic.goldenpotions.config.ModConfig;
+import me.pajic.goldenpotions.mixson.ResourceModifications;
 import me.pajic.goldenpotions.potion.ModPotions;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
@@ -18,6 +19,7 @@ public class Main implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        ResourceModifications.init();
         ModPotions.init();
     }
 
