@@ -1,28 +1,36 @@
-package me.pajic.modid;
+package me.pajic.goldenpotions;
 
 import me.fzzyhmstrs.fzzy_config.api.ConfigApiJava;
-import me.pajic.modid.config.ModConfig;
-import me.pajic.modid.mixson.AssetPatches;
-import me.pajic.modid.platform.Platform;
+import me.pajic.goldenpotions.config.ModConfig;
+import me.pajic.goldenpotions.mixson.AssetPatches;
+import me.pajic.goldenpotions.platform.Platform;
 import net.minecraft.resources.Identifier;
+import net.ramixin.mixson.Mixson;
+import net.ramixin.mixson.enums.DebugOption;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 //? fabric {
-import me.pajic.modid.platform.fabric.FabricPlatform;
+import me.pajic.goldenpotions.platform.fabric.FabricPlatform;
 //?} neoforge {
-/*import me.pajic.modid.platform.neoforge.NeoforgePlatform;
+/*import me.pajic.goldenpotions.platform.neoforge.NeoforgePlatform;
  *///?}
 
 @SuppressWarnings("LoggingSimilarMessage")
-public class ModTemplate {
+public class GoldenPotions {
 
-	public static final String MOD_ID = /*$ mod_id*/ "modid";
+	public static final String MOD_ID = /*$ mod_id*/ "goldenpotions";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 	private static final Platform PLATFORM = createPlatformInstance();
 	public static ModConfig CONFIG = ConfigApiJava.registerAndLoadConfig(ModConfig::new);
 
-	public static void onInitialize() {}
+	public static void onInitialize() {
+		if (PLATFORM.isDebug()) {
+			Mixson.enableDebugOption(DebugOption.BASIC_LOGGING);
+			Mixson.enableDebugOption(DebugOption.EXTRA_LOGGING);
+			Mixson.enableDebugOption(DebugOption.EXPORT_PATCHED_FILE);
+		}
+	}
 
 	public static void onInitializeClient() {
 		AssetPatches.init();

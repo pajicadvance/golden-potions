@@ -1,4 +1,4 @@
-package me.pajic.modid.platform;
+package me.pajic.goldenpotions.platform;
 
 public interface Platform {
 

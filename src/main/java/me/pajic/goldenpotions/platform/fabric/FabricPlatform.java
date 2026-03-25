@@ -1,8 +1,8 @@
-package me.pajic.modid.platform.fabric;
+package me.pajic.goldenpotions.platform.fabric;
 
 //? fabric {
 
-import me.pajic.modid.platform.Platform;
+import me.pajic.goldenpotions.platform.Platform;
 import net.fabricmc.loader.api.FabricLoader;
 
 public class FabricPlatform implements Platform {
