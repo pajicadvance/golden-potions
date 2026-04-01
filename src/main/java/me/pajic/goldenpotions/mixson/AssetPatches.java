@@ -6,7 +6,7 @@ import net.minecraft.client.Minecraft;
 public class AssetPatches {
 
 	public static void init() {
-		if (GoldenPotions.xplat().isModLoaded("item-descriptions")) MixsonHelper.registerMultiJsonPersistent(
+		if (GoldenPotions.xplat().isModLoaded("item-descriptions")) MixsonHelper.registerMultiJson(
 				"Apply item description overrides",
 				index -> index.id().toString().startsWith("item_descriptions:lang/"),
 				context -> {
