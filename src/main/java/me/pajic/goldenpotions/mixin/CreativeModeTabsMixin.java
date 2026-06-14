@@ -21,7 +21,7 @@ public class CreativeModeTabsMixin {
 	@Definition(id = "GOLDEN_APPLE", field = "Lnet/minecraft/world/item/Items;GOLDEN_APPLE:Lnet/minecraft/world/item/Item;")
 	@Expression("?.accept(GOLDEN_APPLE)")
 	@WrapWithCondition(
-			method = "lambda$bootstrap$22",
+			method = {"lambda$bootstrap$22", "lambda$bootstrap$24"},
 			at = @At("MIXINEXTRAS:EXPRESSION")
 	)
 	private static boolean removeGoldenAppleFromFoodAndDrinksCategory(CreativeModeTab.Output instance, ItemLike item) {
@@ -32,7 +32,7 @@ public class CreativeModeTabsMixin {
 	@Definition(id = "ENCHANTED_GOLDEN_APPLE", field = "Lnet/minecraft/world/item/Items;ENCHANTED_GOLDEN_APPLE:Lnet/minecraft/world/item/Item;")
 	@Expression("?.accept(ENCHANTED_GOLDEN_APPLE)")
 	@WrapWithCondition(
-			method = "lambda$bootstrap$22",
+			method = {"lambda$bootstrap$22", "lambda$bootstrap$24"},
 			at = @At("MIXINEXTRAS:EXPRESSION")
 	)
 	private static boolean removeEnchantedGoldenAppleFromFoodAndDrinksCategory(CreativeModeTab.Output instance, ItemLike item) {
@@ -43,7 +43,7 @@ public class CreativeModeTabsMixin {
 	@Definition(id = "GOLDEN_CARROT", field = "Lnet/minecraft/world/item/Items;GOLDEN_CARROT:Lnet/minecraft/world/item/Item;")
 	@Expression("?.accept(GOLDEN_CARROT)")
 	@WrapWithCondition(
-			method = "lambda$bootstrap$22",
+			method = {"lambda$bootstrap$22", "lambda$bootstrap$24"},
 			at = @At("MIXINEXTRAS:EXPRESSION")
 	)
 	private static boolean removeGoldenCarrotFromFoodAndDrinksCategory(CreativeModeTab.Output instance, ItemLike item) {
@@ -51,7 +51,7 @@ public class CreativeModeTabsMixin {
 	}
 
 	@ModifyExpressionValue(
-			method = "lambda$bootstrap$21",
+			method = {"lambda$bootstrap$21", "lambda$bootstrap$23"},
 			at = @At(
 					value = "FIELD",
 					target = "Lnet/minecraft/world/item/Items;GOLDEN_APPLE:Lnet/minecraft/world/item/Item;",

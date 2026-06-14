@@ -17,12 +17,13 @@ public abstract class TippedArrowItemMixin extends Item {
 		super(properties);
 	}
 
+	@SuppressWarnings("LocalMayUseName")
 	@ModifyReturnValue(
 			method = "getName",
 			at = @At("RETURN")
 	)
-	private Component modifyName(Component original, @Local(argsOnly = true) ItemStack stack) {
-		return ModPotions.isElixirOfLife(stack) ?
+	private Component modifyName(Component original, @Local(argsOnly = true) ItemStack itemStack) {
+		return ModPotions.isElixirOfLife(itemStack) ?
 				original.copy().withStyle(ModPotions.getElixirOfLifeNameColor()) :
 				original;
 	}

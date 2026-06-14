@@ -22,11 +22,11 @@ public class ItemsMixin {
 					target = "Lnet/minecraft/world/item/Item$Properties;food(Lnet/minecraft/world/food/FoodProperties;)Lnet/minecraft/world/item/Item$Properties;"
 			)
 	)
-	private static Item.Properties goldenItemsNotEdible(Item.Properties instance, FoodProperties food, Operation<Item.Properties> original) {
-		return food.equals(Foods.GOLDEN_APPLE) && !GoldenPotions.CONFIG.edibleGoldenApple.get() ||
-				food.equals(Foods.ENCHANTED_GOLDEN_APPLE) && !GoldenPotions.CONFIG.edibleEnchantedGoldenApple.get() ||
-				food.equals(Foods.GOLDEN_CARROT) && !GoldenPotions.CONFIG.edibleGoldenCarrot.get() ?
-				instance : original.call(instance, food);
+	private static Item.Properties goldenItemsNotEdible(Item.Properties instance, FoodProperties foodProperties, Operation<Item.Properties> original) {
+		return foodProperties.equals(Foods.GOLDEN_APPLE) && !GoldenPotions.CONFIG.edibleGoldenApple.get() ||
+				foodProperties.equals(Foods.ENCHANTED_GOLDEN_APPLE) && !GoldenPotions.CONFIG.edibleEnchantedGoldenApple.get() ||
+				foodProperties.equals(Foods.GOLDEN_CARROT) && !GoldenPotions.CONFIG.edibleGoldenCarrot.get() ?
+				instance : original.call(instance, foodProperties);
 	}
 
 	@WrapOperation(
@@ -36,9 +36,9 @@ public class ItemsMixin {
 					target = "Lnet/minecraft/world/item/Item$Properties;food(Lnet/minecraft/world/food/FoodProperties;Lnet/minecraft/world/item/component/Consumable;)Lnet/minecraft/world/item/Item$Properties;"
 			)
 	)
-	private static Item.Properties goldenItemsNotEdible(Item.Properties instance, FoodProperties food, Consumable consumable, Operation<Item.Properties> original) {
+	private static Item.Properties goldenItemsNotEdible(Item.Properties instance, FoodProperties foodProperties, Consumable consumable, Operation<Item.Properties> original) {
 		return consumable.equals(Consumables.GOLDEN_APPLE) && !GoldenPotions.CONFIG.edibleGoldenApple.get() ||
 				consumable.equals(Consumables.ENCHANTED_GOLDEN_APPLE) && !GoldenPotions.CONFIG.edibleEnchantedGoldenApple.get() ?
-				instance : original.call(instance, food, consumable);
+				instance : original.call(instance, foodProperties, consumable);
 	}
 }
